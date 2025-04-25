@@ -56,7 +56,7 @@ The main DAG `load_s3_data_to_redshift.py` orchestrates the entire ELT flow:
 3. **Run dbt Models**:  
    - **Silver Layer**: Cleans and prepares the data.  
    - **Gold Layer**: Builds dimension and fact tables.  
-4. **Data Quality Checks** *(optional)*: Ensure integrity before marking pipeline as successful.
+4. **Data Quality Checks** *(using dbt test)*: Ensure integrity before marking pipeline as successful.
 
 ![Airflow](./include/docs/airflow.png)
 ---
