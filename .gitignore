@@ -9,3 +9,4 @@ extract_postgres_to_s3.py
 postgres_ddl_bronze.sql
 datasets
 .astro
+.env
