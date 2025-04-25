@@ -1,0 +1,66 @@
+version: 2
+
+models:
+  - name: crm_cust_info
+    description: Silver layer customer info with normalized gender and marital status
+    columns:
+      - name: cst_id
+        description: Unique identifier for customers
+        tests:
+          - not_null
+          - unique
+
+      - name: cst_key
+        description: Customer key reference
+        tests:
+          - not_null
+
+      - name: cst_marital_status
+        description: Normalized marital status
+        tests:
+          - accepted_values:
+              values: ['Single', 'Married', 'n/a']
+
+      - name: cst_gndr
+        description: Normalized gender
+        tests:
+          - accepted_values:
+              values: ['Male', 'Female', 'n/a']
+
+      - name: cst_create_date
+        description: Customer record creation date
+        tests:
+          - not_null
+
+  - name: crm_sales_details
+    description: Cleaned and recalculated sales transactions
+    columns:
+      - name: sls_ord_num
+        description: Sales order number
+        tests:
+          - not_null
+
+      - name: sls_prd_key
+        description: Product key
+        tests:
+          - not_null
+
+      - name: sls_cust_id
+        description: Customer ID
+        tests:
+          - not_null
+
+      - name: sls_sales
+        description: Final sales value after correction
+        tests:
+          - not_null
+
+      - name: sls_quantity
+        description: Quantity of products sold
+        tests:
+          - not_null
+
+      - name: sls_price
+        description: Corrected price per item
+        tests:
+          - not_null

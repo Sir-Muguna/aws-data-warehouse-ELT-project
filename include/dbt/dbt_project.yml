@@ -1,0 +1,28 @@
+name: aws_datawarehouse_project
+version: '1.1.0'
+config-version: 2
+
+profile: aws_datawarehouse_project
+
+model-paths: ["models"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  aws_datawarehouse_project:
+    +materialized: table
+
+    silver:
+      +materialized: table
+      +schema: silver
+      +tags: ["silver"]
+
+    gold:
+      +materialized: view
+      +schema: gold
+      +tags: ["gold"]
+
+# Optional vars (as you had)
+vars:
+  truncate_before_load: false
+  batch_size: 50000

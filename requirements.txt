@@ -1,0 +1,18 @@
+# Core dbt
+# Core dbt
+dbt-core==1.7.7
+dbt-postgres==1.7.7
+dbt-redshift==1.7.7
+
+# Cosmos & Airflow
+astronomer-cosmos[redshift]==1.9.2
+apache-airflow-providers-amazon>=8.0.0
+apache-airflow-providers-postgres>=5.0.0
+
+# AWS Connectivity
+boto3>=1.29.0
+redshift-connector
+
+# Optional
+psycopg2-binary>=2.9.6
+protobuf<=5.0.0

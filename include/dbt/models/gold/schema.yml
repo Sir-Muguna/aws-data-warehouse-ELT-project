@@ -1,0 +1,53 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: "Dimension table for customers"
+    columns:
+      - name: customer_key
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        tests:
+          - not_null
+      - name: gender
+        tests:
+          - accepted_values:
+              values: ['Male', 'Female', 'n/a']
+      - name: create_date
+        tests:
+          - not_null
+
+  - name: dim_products
+    description: "Dimension table for products"
+    columns:
+      - name: product_key
+        tests:
+          - not_null
+          - unique
+      - name: product_id
+        tests:
+          - not_null
+      - name: start_date
+        tests:
+          - not_null
+      - name: cost
+        tests:
+          - not_null
+
+  - name: fact_sales
+    description: "Fact table for sales"
+    columns:
+      - name: order_number
+        tests:
+          - not_null
+      - name: product_key
+        tests:
+          - not_null
+      - name: customer_key
+        tests:
+          - not_null
+      - name: sales_amount
+        tests:
+          - not_null

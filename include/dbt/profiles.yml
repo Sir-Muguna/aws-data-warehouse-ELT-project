@@ -1,0 +1,28 @@
+aws_datawarehouse_project:
+  target: dev_silver
+  outputs:
+    dev_silver:
+      type: redshift
+      host: "{{ env_var('REDSHIFT_HOST') }}"
+      port: 5439
+      user: "{{ env_var('REDSHIFT_USER') }}"
+      password: "{{ env_var('REDSHIFT_PASSWORD') }}"
+      dbname: "{{ env_var('REDSHIFT_DB') }}"
+      schema: silver
+      threads: 4
+      keepalives_idle: 0
+      connect_timeout: 120
+      ra3_node: true
+
+    dev_gold:
+      type: redshift
+      host: "{{ env_var('REDSHIFT_HOST') }}"
+      port: 5439
+      user: "{{ env_var('REDSHIFT_USER') }}"
+      password: "{{ env_var('REDSHIFT_PASSWORD') }}"
+      dbname: "{{ env_var('REDSHIFT_DB') }}"
+      schema: gold
+      threads: 4
+      keepalives_idle: 0
+      connect_timeout: 120
+      ra3_node: true
