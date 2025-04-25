@@ -89,6 +89,7 @@ aws-data-warehouse-ELT-project/
 │   │       ├── erp_cust_atz12.sql
 │   │       ├── erp_loc_a101.sql
 │   │       ├── erp_px_cat_g1v2.sql
+│   │       ├── schema.yml
 │   │       └── sources.yml
 │   ├── target/                           # dbt compiled/run outputs
 │   ├── dbt_project.yml
