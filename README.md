@@ -26,6 +26,9 @@ This project follows the **Medallion Architecture** pattern using AWS-native ser
 2. **Silver (Cleaned Data)**: Load and clean raw data using SQL models in dbt.  
 3. **Gold (Data Mart)**: Star schema (facts and dimensions) ready for analytics.
 
+![Tables](./include/docs/redshift.png)
+
+![StarSchema](./include/docs/data_model.png)
 ---
 
 ## 🔁 DAG Workflow
@@ -39,6 +42,7 @@ The main DAG `load_s3_data_to_redshift.py` orchestrates the entire ELT flow:
    - **Gold Layer**: Builds dimension and fact tables.  
 4. **Data Quality Checks** *(optional)*: Ensure integrity before marking pipeline as successful.
 
+![Airflow](./include/docs/airflow.png)
 ---
 
 ## 📁 Repository Structure
