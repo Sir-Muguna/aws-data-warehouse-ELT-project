@@ -1,6 +1,18 @@
 # 🚀 AWS Data Warehouse ELT Project
 
-Welcome to the **AWS Data Warehouse ELT Project** — a robust, scalable, and cloud-native data engineering pipeline that automates the extraction, transformation, and loading (ELT) of raw business data into an Amazon Redshift-powered warehouse. This project showcases real-world data warehousing concepts using **Apache Airflow**, **AWS S3**, **Amazon Redshift**, and modern orchestration best practices.
+Project Summary: Modern ELT Pipeline with Airflow, Redshift & dbt
+This project showcases a production-grade ELT pipeline built on AWS, orchestrated with Apache Airflow, powered by Amazon Redshift, and modeled using dbt. Here's a breakdown of the full data journey:
+
+🛠️ Bronze Layer: Schema & Raw Ingestion
+We kick off by building the foundational structure in the Bronze layer. Redshift DDL scripts create schemas and tables for CRM and ERP systems, followed by a clean-up phase that truncates existing data to ensure a fresh load. Then, raw CSV files are securely ingested from Amazon S3 into Redshift using highly-optimized COPY commands.
+
+🔄 Silver Layer: Data Transformation with dbt
+Once the raw data lands, we level up to the Silver layer where dbt (data build tool) runs curated transformation models. These models clean, validate, and enrich the data—turning chaos into clarity. Post-transformation, automated tests are executed to ensure integrity and trustworthiness.
+
+🏆 Gold Layer: Business-Centric Models & Final QA
+In the final stage, the Gold layer focuses on delivering business-ready datasets. Aggregations, KPIs, and domain-specific insights are built using dbt and tested rigorously to guarantee quality. This ensures analytics and downstream systems consume clean, tested, and high-value data.
+
+✅ From raw files in S3 to trusted business insights in Redshift, this pipeline follows the best practices of modern data engineering—automated, modular, and production-ready.
 
 ![Architecture](./include/docs/architecture.png)
 
