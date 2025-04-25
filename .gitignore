@@ -10,3 +10,4 @@ postgres_ddl_bronze.sql
 datasets
 .astro
 .env
+.env
