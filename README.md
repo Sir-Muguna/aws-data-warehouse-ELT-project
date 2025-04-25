@@ -1,4 +1,3 @@
-```markdown
 # 🚀 AWS Data Warehouse ELT Project
 
 Welcome to the **AWS Data Warehouse ELT Project** — a robust, scalable, and cloud-native data engineering pipeline that automates the extraction, transformation, and loading (ELT) of raw business data into an Amazon Redshift-powered warehouse. This project showcases real-world data warehousing concepts using **Apache Airflow**, **AWS S3**, **Amazon Redshift**, and modern orchestration best practices.
@@ -90,54 +89,4 @@ aws-data-warehouse-ELT-project/
 │       ├── create_schema.sql
 │       ├── grant_allusersql.sql
 │       └── grant_usage_public.sql
-```
 
----
-
-## 🧪 Data Sources
-
-This project uses simulated data that represents common CRM and ERP structures:
-
-- Customer information  
-- Product catalogs  
-- Sales transactions  
-- Geographic and time-related attributes
-
----
-
-## 🧠 Warehouse Design (Star Schema)
-
-The **Gold Layer** in Redshift contains:
-
-- `dim_customers`  
-- `dim_products`  
-- `fact_sales`
-
----
-
-## 🛠️ Setup Instructions *(Optional)*
-
-> ⚙️ Coming Soon — Add a step-by-step guide to deploy this on your AWS and Airflow environment.
-
----
-
-## 🏷️ Contributing *(Optional)*
-
-Contributions are welcome! Please open an issue or submit a PR for improvements or fixes.
-
----
-
-## 📄 License
-
-MIT License — see the [LICENSE](./LICENSE) file for details.
-```
-
----
-
-Let me know if you'd like to:
-- Add dynamic status badges (e.g., Airflow DAG status, dbt test pass/fail, etc.)
-- Write setup instructions for AWS Redshift, Airflow, or dbt
-- Include sample dataset links or S3 setup guides
-- Add a "Use Case" or "Demo GIF" section
-
-Happy to help take it to the next level!
