@@ -1,17 +1,20 @@
+Here's your markdown, **reformatted for GitHub** with proper spacing, syntax highlighting where appropriate, and preserved structure:
+
 ```markdown
 # 🚀 AWS Data Warehouse ELT Project
 
 Welcome to the **AWS Data Warehouse ELT Project** — a robust, scalable, and cloud-native data engineering pipeline that automates the extraction, transformation, and loading (ELT) of raw business data into an Amazon Redshift-powered warehouse. This project showcases real-world data warehousing concepts using **Apache Airflow**, **AWS S3**, **Amazon Redshift**, and modern orchestration best practices.
 
 ![MetaData](./include/docs/architecture.png)
+
 ---
 
 ## 🧠 Key Features
 
-- ⚙️ **Airflow Orchestration**: Task scheduling, logging, and monitoring via DAGs.
-- 🪣 **Data Lake on S3**: Stores raw and intermediate files (Bronze & Silver layers).
-- 🧽 **ELT Design**: Transformation logic is handled in Redshift using dbt.
-- 🛢 **Data Warehouse**: Redshift holds the final star-schema (Gold layer) optimized for analytics.
+- ⚙️ **Airflow Orchestration**: Task scheduling, logging, and monitoring via DAGs.  
+- 🪣 **Data Lake on S3**: Stores raw and intermediate files (Bronze & Silver layers).  
+- 🧽 **ELT Design**: Transformation logic is handled in Redshift using dbt.  
+- 🛢 **Data Warehouse**: Redshift holds the final star-schema (Gold layer) optimized for analytics.  
 - 📈 **Modular and Scalable**: Built for extensibility and cloud-scale workloads.
 
 ---
@@ -22,23 +25,22 @@ This project follows the **Medallion Architecture** pattern using AWS-native ser
 
 ### 🧱 Medallion Architecture Layers
 
-1. **Bronze (DDL Definitions)**: Create base staging tables in Redshift.
-2. **Silver (Cleaned Data)**: Load and clean raw data using SQL models in dbt.
+1. **Bronze (DDL Definitions)**: Create base staging tables in Redshift.  
+2. **Silver (Cleaned Data)**: Load and clean raw data using SQL models in dbt.  
 3. **Gold (Data Mart)**: Star schema (facts and dimensions) ready for analytics.
 
-
+---
 
 ## 🔁 DAG Workflow
 
 The main DAG `load_s3_data_to_redshift.py` orchestrates the entire ELT flow:
 
-1. **Stage to Redshift**: Copies raw CSV files from S3 to Redshift.
-2. **DDL Creation (Bronze)**: Executes Redshift SQL scripts to create schema and base tables.
-3. **Run dbt Models**:
-   - Silver layer: cleans and prepares the data.
-   - Gold layer: builds dimension and fact tables.
-4. **Data Quality Checks** (optional): Ensure integrity before marking pipeline as successful.
-
+1. **Stage to Redshift**: Copies raw CSV files from S3 to Redshift.  
+2. **DDL Creation (Bronze)**: Executes Redshift SQL scripts to create schema and base tables.  
+3. **Run dbt Models**:  
+   - Silver layer: cleans and prepares the data.  
+   - Gold layer: builds dimension and fact tables.  
+4. **Data Quality Checks** *(optional)*: Ensure integrity before marking pipeline as successful.
 
 ---
 
@@ -98,9 +100,9 @@ aws-data-warehouse-ELT-project/
 
 Data used in this project simulates common CRM and ERP datasets:
 
-- Customer information
-- Product catalogs
-- Sales transactions
+- Customer information  
+- Product catalogs  
+- Sales transactions  
 - Geographic and time-related attributes
 
 ---
@@ -109,9 +111,9 @@ Data used in this project simulates common CRM and ERP datasets:
 
 The **Gold Layer** in Redshift contains the following tables:
 
-- `dim_customers`
-- `dim_products`
+- `dim_customers`  
+- `dim_products`  
 - `fact_sales`
+```
 
-
-
+Let me know if you'd like to add badges, setup instructions, or contribute sections!
