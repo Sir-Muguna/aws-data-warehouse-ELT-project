@@ -9,6 +9,7 @@ This project showcases a production-grade ELT pipeline built on AWS, orchestrate
 We kick off by building the foundational structure in the Bronze layer. Redshift DDL scripts create schemas and tables for CRM and ERP systems, followed by a clean-up phase that truncates existing data to ensure a fresh load. Then, raw CSV files are securely ingested from Amazon S3 into Redshift using highly-optimized COPY commands.
 
 🔄 Silver Layer: Data Transformation with dbt.
+
 Once the raw data lands, we level up to the Silver layer where dbt (data build tool) runs curated transformation models. These models clean, validate, and enrich the data—turning chaos into clarity. Post-transformation, automated tests are executed to ensure integrity and trustworthiness.
 
 🏆 Gold Layer: Business-Centric Models & Final QA.
