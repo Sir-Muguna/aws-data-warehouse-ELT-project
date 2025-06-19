@@ -167,4 +167,4 @@ with DAG(
         execution_timeout=timedelta(minutes=10),
     )
 
-    bronze_ddl_group >> truncate_bronze_group >> copy_group >> dbt_silver >> dbt_test_silver >> dbt_gold >> dbt_test_gold
+    bronze_ddl_group >> truncate_bronze_group >> copy_group >> dbt_silver >> dbt_test_silver >> dbt_gold >> dbt_test_gold # type: ignore
